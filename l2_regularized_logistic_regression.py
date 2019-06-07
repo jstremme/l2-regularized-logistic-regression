@@ -325,7 +325,7 @@ def k_fold_crossval(X, y, lambdas=[0.001, 0.01, 0.1, 1, 10, 100, 1000], k=5, eps
     mean_test_errors = []
     for l in lambdas:
 
-        dfs = k_random_splits(to_df_with_class(X, y), 5)
+        dfs = k_random_splits(to_df_with_class(X, y), k)
         test_errors =[]
         for i in range(0, k):
 
